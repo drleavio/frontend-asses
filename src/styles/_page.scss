@@ -1,0 +1,24 @@
+.parent-container{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px;
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .select-container{
+
+   display: flex;
+    .select{
+        padding: 20px;
+        select{
+            padding: 5px 10px;
+            background: transparent;
+            color: black;
+        }
+    }
+    }
+}
