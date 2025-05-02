@@ -11,16 +11,13 @@ const ProductDetails = () => {
             const response=await axios.get(`https://fakestoreapi.com/products/${productid}`)
             console.log(response.data);
             setDetails(response.data)
-            // console.log(details,"data");
         } catch (error) {
             console.log(error);
             
         }
     }
     useEffect(()=>{
-        // if (productid) {
             fetchProduct();
-        // } 
     },[productid])
     if(!details) return <div>loading....</div>
   return (

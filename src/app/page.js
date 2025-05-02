@@ -6,14 +6,12 @@ import Card from '@/components/Card'
 
 
 const page = () => {
-  // const [data,setData]=useState([]);
-  const {data,addData,setData}=useDataStore();
+  const {data,setData}=useDataStore();
   const [category,setCategory]=useState("");
   const [filterdata,setFilterdata]=useState([]);
   const [loading,setLoading]=useState(false);
   const [sort,setSort]=useState("");
   const [search,setSearch]=useState("")
-  // const [searchedData,setSearchedData]=useState([])
   const fetchData=async()=>{
     setLoading(true)
     const response=await axios.get("https://fakestoreapi.com/products");
